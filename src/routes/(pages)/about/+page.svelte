@@ -1,6 +1,8 @@
-<h1 class="text-3xl font-bold mb-4">Acerca de Chacla</h1>
+<h1 class="text-3xl font-bold mb-4 text-blue-700 dark:text-blue-300">
+    Acerca de Chacla.pe
+</h1>
 <p class="text-lg text-gray-600 dark:text-gray-300 mb-4">
-    Chacla es un directorio digital de negocios y servicios de Chaclacayo,
+    Chacla.pe es un directorio digital de negocios y servicios de Chaclacayo,
     pensado para conectar a la comunidad y apoyar el desarrollo local.
 </p>
 <p class="text-gray-600 dark:text-gray-400">
