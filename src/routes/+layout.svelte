@@ -1,7 +1,7 @@
 <script>
   // @ts-nocheck
 
-  import "../app.css";
+  import "../style.css";
   import Menu from "$lib/Menu.svelte";
   let menuOpen = false;
 </script>

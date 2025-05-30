@@ -1,21 +1,14 @@
-<h1 class="text-3xl font-bold mb-4 text-blue-700 dark:text-blue-300">
-    Contacto
-</h1>
-<p class="mb-6 text-gray-600 dark:text-gray-300">
+<h1 class="text-3xl font-bold mb-4">Contacto</h1>
+<p class="mb-6">
     ¿Quieres aparecer en el directorio o tienes alguna consulta? ¡Escríbenos!
 </p>
 <form
-    class="bg-white dark:bg-gray-900 shadow rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto space-y-4"
+    class="bg-base-100 shadow rounded px-8 pt-6 pb-8 mb-4 max-w-md mx-auto space-y-4"
 >
     <div>
-        <label
-            class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
-            for="name"
-        >
-            Nombre
-        </label>
+        <label class="block text-sm font-bold mb-2" for="name"> Nombre </label>
         <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+            class="input input-bordered w-full"
             id="name"
             type="text"
             placeholder="Tu nombre"
@@ -23,14 +16,9 @@
         />
     </div>
     <div>
-        <label
-            class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
-            for="email"
-        >
-            Email
-        </label>
+        <label class="block text-sm font-bold mb-2" for="email"> Email </label>
         <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+            class="input input-bordered w-full"
             id="email"
             type="email"
             placeholder="tucorreo@email.com"
@@ -38,26 +26,18 @@
         />
     </div>
     <div>
-        <label
-            class="block text-gray-700 dark:text-gray-200 text-sm font-bold mb-2"
-            for="message"
-        >
+        <label class="block text-sm font-bold mb-2" for="message">
             Mensaje
         </label>
         <textarea
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 dark:text-gray-200 dark:bg-gray-800 leading-tight focus:outline-none focus:shadow-outline"
+            class="textarea textarea-bordered w-full"
             id="message"
             rows="4"
             placeholder="¿Cómo podemos ayudarte?"
             required
         ></textarea>
     </div>
-    <div class="flex items-center justify-between">
-        <button
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-        >
-            Enviar
-        </button>
+    <div class="flex items-center justify-end">
+        <button class="btn btn-primary" type="submit"> Enviar </button>
     </div>
 </form>
