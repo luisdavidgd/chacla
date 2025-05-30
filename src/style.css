@@ -1,4 +1,9 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
-  themes: all
+  themes: emerald --default, sunset --prefersdark;
+}
+
+.active {
+  @apply bg-primary text-primary-content;
 }

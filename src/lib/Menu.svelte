@@ -1,4 +1,5 @@
 <script>
+  import { page } from "$app/stores";
   export let menuOpen;
   export let setMenuOpen;
 
@@ -11,21 +12,25 @@
 </script>
 
 <nav class="navbar bg-base-100 fixed top-0 left-0 w-full z-50 shadow">
-  <div class="flex w-full items-center justify-between">
+  <div class="flex w-full items-center justify-between max-w-3xl mx-auto">
     <div class="navbar-start">
       <a href="/" class="flex items-center space-x-2">
         <img src="/logo.png" alt="Chacla Logo" class="h-10 w-10" />
-        <span class="text-xl font-bold"
-          >Chacla.pe</span
-        >
+        <span class="text-xl font-bold">Chacla.pe</span>
       </a>
     </div>
     <div class="navbar-end w-auto flex items-center">
       <!-- Desktop menu -->
       <ul class="menu menu-horizontal px-1 hidden md:flex">
         {#each links as { href, label }}
-          <li>
-            <a {href} class="font-medium">{label}</a>
+          <li class="mr-2">
+            <a
+              {href}
+              class="font-medium {$page.url.pathname === href ? 'active' : ''}"
+              aria-current={$page.url.pathname === href ? "page" : undefined}
+            >
+              {label}
+            </a>
           </li>
         {/each}
       </ul>
@@ -59,8 +64,15 @@
       class="menu menu-vertical absolute top-full right-4 mt-2 bg-base-100 shadow rounded-box w-48 md:hidden z-50"
     >
       {#each links as { href, label }}
-        <li>
-          <a {href} on:click={() => setMenuOpen(false)}>{label}</a>
+        <li class="mb-1">
+          <a
+            {href}
+            class={$page.url.pathname === href ? "active" : ""}
+            aria-current={$page.url.pathname === href ? "page" : undefined}
+            on:click={() => setMenuOpen(false)}
+          >
+            {label}
+          </a>
         </li>
       {/each}
     </ul>
